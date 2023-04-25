@@ -82,7 +82,8 @@ while (user != "x") // MAIN LOOP ( start menu >> main menu >> [ all options ] )
                     }
                     else
                     {
-                        InvalidSelection("Press ENTER, then:\n    Press ENTER once, or 'y' then ENTER, if you want to return to the MAIN MENU.\n    Otherwise click 'n' or 'x', then ENTER - to exit this program.\n");
+                        InvalidSelection("");
+                        TextInColor(ConsoleColor.DarkGreen, $"\n    {user}, do you want to return to the MAIN MENU? Please write:\n\n\n         'y' = for YES, then press ENTER / or just press ENTER once,\n\n         'n' or 'x' = for NO - exit the program, then press ENTER.\n");
                         toMenu = Console.ReadLine();
                         Testing("Is your selection correct? (Then you should return to menu or exit this application)\n    YES - then you should check it in program.cs!  /  NO - then you should continue  /  Otherwise it's a bug!");
 
@@ -597,7 +598,7 @@ while (user != "x") // MAIN LOOP ( start menu >> main menu >> [ all options ] )
                     TextInColor(ConsoleColor.White, "    DESCRIPTION OF THE PROGRAM:\n\n");
                     TextInColor(ConsoleColor.Gray, $"      In the PharmacyStorageApp you may manage a small pharmacy storage area. This application allows you to add\n    medicines to the pharmacy storage area or remove it from this area. You can also check how many medicines\n    from specific category is there. {user}, you are able to save a data in the file or save\n    it to the program memory. Everytime you will end adding or removing process, you will see\n    statistics from all actions on a given medicine category.\n\n    For more information read User manual or READMY file.\n\n");
                     TextInColor(ConsoleColor.White, "\n    USER MANUAL:\n\n");
-                    TextInColor(ConsoleColor.Gray, "    Not completed...\n    Remember! You can't remove more then 20 pieces, it's limited. If you remove some medicine it must be minimum 0,001 piece.\n");
+                    TextInColor(ConsoleColor.Gray, "    Not completed...\n    Remember! You can't remove more then 20 pieces, it's limited. If you remove some medicine it must be minimum 0,01 piece.\n");
                     NextStep();
                     Testing("This section in not complete...");
                     BackToMenu();

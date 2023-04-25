@@ -147,7 +147,7 @@
 
             if (medicinesInStock > 0)
             {
-                if (medicines < -0 && medicines >= -20)
+                if (medicines <= -0.01 && medicines >= -20)
                 {
                     this.specificMedicationsAvailable.Add(medicines);
                     medicinesInStock = specificMedicationsAvailable.Sum();
@@ -166,7 +166,7 @@
                 }
                 else
                 {
-                    throw new Exception("Invalid value!\n    This value must be in the range from -20 to -1. You have to write it with sign '-' (minus) before the number.\n\n    Try again!");
+                    throw new Exception("Invalid value!\n    This value must be in the range from -20 to -0,01. You have to write it with sign '-' (minus) before the number.\n\n    Try again!");
                 }
             }
             else if (medicinesInStock <= 0)
