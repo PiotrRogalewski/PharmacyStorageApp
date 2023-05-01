@@ -5,7 +5,7 @@
 
 
       This simple program allows you to manage the dispensing and storage of various medicines in a pharmacy
-    stroage area. There are 8 categories of medicines in this app. You can manage each of them, but without more 
+    storage area. There are 8 categories of medicines in this app. You can manage each of them, but without more 
     specific details such as medicine proper name or composition etc, only main categories. Below you can find
     this categories:
 
