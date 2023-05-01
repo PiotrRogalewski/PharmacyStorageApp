@@ -40,7 +40,7 @@
 
      ...
      
-     1c. Limits"
+     1c. Limits
 
          All categories of medicines have upper limit of quantity. This upper limit is 600 packages/pieces for
        each category separately. Lower limit is 0. So for example: if storage has 0 syrups then you are not
