@@ -548,7 +548,7 @@ static void NextStep()
 
     while (nextStep != "")
     {
-        TextInColor(ConsoleColor.Red, "\n    Error! Press only ENTER to continue.\n");
+        TextInColor(ConsoleColor.Red, "\n    Press only ENTER to continue.\n");
         nextStep = Console.ReadLine();
     }
 }

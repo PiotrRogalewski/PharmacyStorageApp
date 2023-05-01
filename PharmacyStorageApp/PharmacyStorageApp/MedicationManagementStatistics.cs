@@ -84,30 +84,31 @@
             {
                 var medicinesInStock = this.SumOfAddition - this.SumOfSubtraction;
 
-                if (medicinesInStock >= 0 && medicinesInStock <= 600)
+                if (medicinesInStock > 0 && medicinesInStock <= 600)
                 {
                     return medicinesInStock;
                 }
                 else if (medicinesInStock > 600)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"\n    Warning! Overcrowded storage area!\n    In this storage area should be no more than 600 medicines in stock.\n    You must first remove excess meds and if you will have less than 600 pieces of medicines\n    then you will be able to add more new medicines from this category.");
+                    Console.WriteLine($"\n    Error! Overcrowded storage area!\n    In this storage area should be no more than 600 medicines in stock.\n    You must first remove excess meds and if you will have less than 600 pieces of medicines\n    then you will be able to add more new medicines from this category.");
                     Console.ResetColor();
-
+                    medicinesInStock = 600;
                     return medicinesInStock;
                 }
-                else if (medicinesInStock < 0)
+                else if (medicinesInStock == 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"\n    Warning! This storage area is empty (or almost empty)!\n    In this storage area must be no less than 0 medicines in stock.\n    You must first add new meds to be able to remove more medicines from this category.\n");
+                    Console.WriteLine($"\n    Warning! This storage area is empty!\n    You must first add new meds to be able to remove more medicines from this category.\n");
                     Console.ResetColor();
                     return medicinesInStock;
                 }
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"\n    Warning! The storage area is empty!\n    First add new medicines, then you will be able to remove medicines.\n");
+                    Console.WriteLine($"\n    Error! In the storage area must be no less than 0 medicines in stock.\n");
                     Console.ResetColor();
+                    medicinesInStock = 0;
                     return medicinesInStock;
                 }
             }

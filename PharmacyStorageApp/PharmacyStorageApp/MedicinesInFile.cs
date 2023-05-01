@@ -207,46 +207,46 @@
 
             if (medicinesInStock >= 20)
             {
-                if (medicines <= -0.01 && medicines >= -20)
+                if (medicines <= -0.1 && medicines >= -20)
                 {
                     WritingNegativeNumberInFile();
                 }
                 else
                 {
-                    throw new Exception("Invalid value!\n    This value must be in the range from -20 to -0.01. For more information check user manual or READMY file.\n\n    You have to write it with sign '-' (minus) before the number. Try again!\n");
+                    throw new Exception("Invalid value!\n    This value must be in the range from -20 to -0.1. For more information check user manual or READMY file.\n\n    You have to write it with sign '-' (minus) before the number. Try again!\n");
                 }
             }
             else if (medicinesInStock >= 10 && medicinesInStock <= 19)
             {
-                if (medicines <= -0.01 && medicines >= -10)
+                if (medicines <= -0.1 && medicines >= -10)
                 {
                     WritingNegativeNumberInFile();
                 }
                 else
                 {
-                    throw new Exception($"Invalid value!  Medicines in stock:  {medicinesInStock}\n    This value must be in the range from -10 to -0.01, because the storage area is alomost empty.\n    For more information check user manual or READMY file.\n\n    You have to write it with sign '-' (minus) before the number. Try again!\n");
+                    throw new Exception($"Invalid value!  Medicines in stock:  {medicinesInStock}\n    This value must be in the range from -10 to -0.1, because the storage area is alomost empty.\n    For more information check user manual or READMY file.\n\n    You have to write it with sign '-' (minus) before the number. Try again!\n");
                 }
             }
             else if (medicinesInStock >= 5 && medicinesInStock <= 9)
             {
-                if (medicines <= -0.01 && medicines >= -5)
+                if (medicines <= -0.1 && medicines >= -5)
                 {
                     WritingNegativeNumberInFile();
                 }
                 else
                 {
-                    throw new Exception($"Invalid value!  Medicines in stock:  {medicinesInStock}\n    This value must be in the range from -5 to -0.01, because the storage area is alomost empty.\n    For more information check user manual or READMY file.\n\n    You have to write it with sign '-' (minus) before the number. Try again!\n");
+                    throw new Exception($"Invalid value!  Medicines in stock:  {medicinesInStock}\n    This value must be in the range from -5 to -0.1, because the storage area is alomost empty.\n    For more information check user manual or READMY file.\n\n    You have to write it with sign '-' (minus) before the number. Try again!\n");
                 }
             }
             else if (medicinesInStock >= 1 && medicinesInStock <= 4)
             {
-                if (medicinesInStock <= -0.01 && medicines >= -1)
+                if (medicines <= -0.1 && medicines >= -1)
                 {
                     WritingNegativeNumberInFile();
                 }
                 else
                 {
-                    throw new Exception($"Invalid value!  Medicines in stock:  {medicinesInStock}\n    This value must be in the range from -1 to -0.01 medicine, because the storage area is alomost empty.\n    For more information check user manual or READMY file.\n\n    You have to write it with sign '-' (minus) before the number. Try again!\n");
+                    throw new Exception($"Invalid value!  Medicines in stock:  {medicinesInStock}\n    This value must be in the range from -1 to -0.1 medicine, because the storage area is alomost empty.\n    For more information check user manual or READMY file.\n\n    You have to write it with sign '-' (minus) before the number. Try again!\n");
                 }
             }
             else if (medicinesInStock <= 0)
