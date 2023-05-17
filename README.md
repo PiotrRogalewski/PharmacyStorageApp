@@ -108,14 +108,14 @@
 	- for letter: 'l' or 'L' - this value is -1 pcs,
 	- for letter: 'm' or 'M' - this value is -5 pcs,
 	- for letter: 'n' or 'N' - this value is -10 pcs,
-	- for letter: 'o' or 'O' - this value is -20 pcs,
+	- for letter: 'o' or 'O' - this value is -20 pcs.
      
 
     III. Data recording
 
-	You can choose from two options. First option is saving to the program memory. In this case you can
-	add or remove medicicnes to/from the available total in the program memory without saving this operations
-	to a file. The program will remember all your actions and it will count statistics until you close console
+	You can choose from two options. First option is saving to the program memory. In this case you can add 
+	or remove medicicnes to/from the available total in the program memory without saving this operations to 
+	a file. The program will remember all your actions and it will count statistics until you close console
 	window. After you choose to exit from the program your data such as medicine in stock, and all statistics 
 	will be lost. 
 	
