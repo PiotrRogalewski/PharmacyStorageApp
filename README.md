@@ -113,24 +113,26 @@
 
     III. Data recording
 
-	You can choose from two options. First option is saving to the program memory. In this case you can add 
-	or remove medicicnes to/from the available total in the program memory without saving this operations to 
-	a file. The program will remember all your actions and it will count statistics until you close console
-	window. After you choose to exit from the program your data such as medicine in stock, and all statistics 
-	will be lost. 
+	You can choose from two options. First option is saving to the program memory - you should write 'm' 
+	and then click ENTER to select it in the method selection menu after you specify your name in the program. 
+	In this case you will be able to add or remove medicicnes to/from the available total in the program memory
+	without saving this operations to a file. The program will remember all your actions and it will count 
+	statistics until you close console window. After you choose to exit from the program your data such as 
+	medicines in stock, and all statistics will be lost. 
 	
-	The second option is saving to a file. For the first time - after you choose category of medicines, the 
-	app create file with selected medicine category name, for example: "dressings_quantity.txt". In this file
-	you can see how many and how often given medicine was added or substracted from total quantity of this
-	medicine. It will be string of numbers. Everything in the program will be similar like in case of saving 
-	data to the program memory, however when you close this app console window and start program from the 
-	beginning your data will be still there. So you can check your actions from before and make new actions, 
-	everything will be included in the statistics.
+	The second option is saving to a file. You should write 'f' and then click ENTER to select it in 
+	the method selection menu after you specify your name in the program. For the first time - after you 
+	choose category of medicines, the app create file with selected medicine category name, for example: 
+	"dressings_quantity.txt". In this file you can see how many and how often given medicine was added or 
+	substracted from total quantity of this medicine. It will be string of numbers. Everything in the program 
+	will be similar like in case of saving data to the program memory, however when you close this app console 
+	window and start program from the beginning your data will be still there. So you can check your actions 
+	from before and make new actions, everything will be included in the statistics.
 
     IV. Statistics 
 
 	All statistics you can check in the program but not in the file. When you finsh adding or substracting
 	packages/pieces operation you should click 'q' button and then pres ENTER button to end this part and 
-	then you can check statistics. You can also check it from the main menu, even if you don't do any action
+	then you will see statistics. You can also check it from the main menu, even if you don't do any action
 	yet. In that case you will see informations about no actions. You may do action of adding and action of 
 	removing several times. The program calculates statistics on a regular basis.
