@@ -1,3 +1,6 @@
+using NUnit.Framework;
+using static PharmacyStorageApp.MedicinesBase;
+
 namespace PharmacyStorageApp.Tests
 {
     public class MedicineTests
@@ -8,13 +11,14 @@ namespace PharmacyStorageApp.Tests
             // arrange
             var medicineInMemory1 = new MedicinesInMemory("pills", "s", "bl", 24);
 
+
             medicineInMemory1.PutMedicineOnTheShelf("big");                 //  value of "big" is:              50
             medicineInMemory1.PutMedicineOnTheShelf('a');                   //  value of 'a' is:                100
             medicineInMemory1.PutMedicineOnTheShelf(80);
             medicineInMemory1.PutMedicineOnTheShelf("30");
             medicineInMemory1.TakeTheMedicineFromTheShelf(-10);
             medicineInMemory1.TakeTheMedicineFromTheShelf("o");             // value of 'o' is:                 -20
-                                           // TOTAL SCORE (mecicineInStock) >> value of medicineInStock is:     230
+                                                                            // TOTAL SCORE (mecicineInStock):   230
 
             // act
             var statistics = medicineInMemory1.GetStatistics();
@@ -38,17 +42,17 @@ namespace PharmacyStorageApp.Tests
             medicineInMemory1.TakeTheMedicineFromTheShelf(-5);
             medicineInMemory1.TakeTheMedicineFromTheShelf('n');             // value of 'n' is:                 -10
             medicineInMemory1.TakeTheMedicineFromTheShelf("m");             // value of 'm' is:                 -5
-                                           // TOTAL SCORE (mecicineInStock) >> value of medicineInStock is:     200
+                                                                            // TOTAL SCORE (mecicineInStock):   200
 
             // act
             var statistics = medicineInMemory1.GetStatistics();
             var medicinesInStock = statistics.AvailableMedications;
             medicinesInStock = (float)Math.Round(medicinesInStock, 0);
-            var result1 = (int)medicinesInStock;
+            var result = (int)medicinesInStock;
 
 
             // assert
-            Assert.AreEqual(200, statistics.AvailableMedications);
+            Assert.AreEqual(200, result);
 
         }
     }

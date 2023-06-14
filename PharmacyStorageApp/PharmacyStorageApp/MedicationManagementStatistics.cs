@@ -28,7 +28,7 @@
 
         public int SubtractionCounter { get; private set; }
 
-        public float AverageOfSubtractions
+        public float AverageOfRemoval
         {
             get
             {
@@ -52,28 +52,32 @@
                         return "C class medications supplier";
                     case var average1 when average1 >= 20:
                         return "D class medications supplier";
-                    default:
+                    case var average1 when average1 < 20 && average1 > 0:
                         return "E class medications supplier";
+                    default:
+                        return "undefined";
                 }
             }
         }
 
-        public char AverageOfSubtractionsAsText
+        public char AverageOfRemovalAsLetter
         {
             get
             {
-                switch (this.AverageOfSubtractions)
+                switch (this.AverageOfRemoval)
                 {
-                    case var average2 when average2 >= -20:
+                    case var average2 when average2 >= 16:
                         return 'A';
-                    case var average2 when average2 >= -15:
+                    case var average2 when average2 >= 12:
                         return 'B';
-                    case var average2 when average2 >= -10:
+                    case var average2 when average2 >= 8:
                         return 'C';
-                    case var average2 when average2 >= -5:
+                    case var average2 when average2 >= 4:
                         return 'D';
-                    default:
+                    case var average2 when average2 > 0 && average2 < 4:
                         return 'E';
+                    default:
+                        return 'u';
                 }
             }
         }
@@ -84,14 +88,21 @@
             {
                 var medicinesInStock = this.SumOfAddition - this.SumOfSubtraction;
 
-                if (medicinesInStock > 0 && medicinesInStock <= 600)
+                if (medicinesInStock > 0 && medicinesInStock < 600)
                 {
+                    return medicinesInStock;
+                }
+                else if (medicinesInStock == 600)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"\n    Warning! This storage area is full!\n");
+                    Console.ResetColor();
                     return medicinesInStock;
                 }
                 else if (medicinesInStock > 600)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"\n    Error! Overcrowded storage area!\n    In this storage area should be no more than 600 medicines in stock.\n    You must first remove excess meds and if you will have less than 600 pieces of medicines\n    then you will be able to add more new medicines from this category.");
+                    Console.WriteLine($"\n    Error! In this storage area should be no more than 600 medicines in stock.\n");
                     Console.ResetColor();
                     medicinesInStock = 600;
                     return medicinesInStock;
@@ -99,7 +110,7 @@
                 else if (medicinesInStock == 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"\n    Warning! This storage area is empty!\n    You must first add new meds to be able to remove more medicines from this category.\n");
+                    Console.WriteLine($"\n    Warning! This storage area is empty!\n");
                     Console.ResetColor();
                     return medicinesInStock;
                 }
